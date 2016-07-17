@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem "twitter-bootstrap-rails"
 gem 'momentjs-rails'
-gem 'rails_bootstrap_sortable'
+gem 'jquery-datatables-rails', '~> 3.3.0'
 
 
 group :development, :test do

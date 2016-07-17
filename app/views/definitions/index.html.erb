@@ -2,11 +2,12 @@
 
 <div class="container">
   
-  <%= link_to 'New Definition', new_definition_path %>
+  <%= link_to 'New Definition', new_definition_path, class: "btn btn-primary", id: "new-button"  %>
   
   <br/>
+  <hr/>
 
-  <div class="dataTables_wrapper form-inline dt-bootstrap">
+  <div>
     <table id="definition-table" class="table table-bordered table-condesed table-striped table-hover table-responsive">
       <thead>
         <tr>
@@ -14,7 +15,8 @@
           <th>Definition</th>
           <th>Originator</th>
           <th>Use</th>
-          <th colspan="2"></th>
+          <th>Edit</th>
+          <th>Delete</th>
         </tr>
       </thead>
 
@@ -25,8 +27,8 @@
             <td><%= definition.definition %></td>
             <td><%= definition.originator %></td>
             <td><%= definition.use %></td>
-            <td><%= link_to 'Edit', edit_definition_path(definition), {class: 'no-sort' } %></td>
-            <td><%= link_to 'X', definition, method: :delete, data: { class: 'no-sort', confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Edit', edit_definition_path(definition) %></td>
+            <td><%= link_to 'X', definition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>
@@ -34,10 +36,13 @@
   </div>
 </div>
 
-<!--
-  <script>
-    $(document).ready(function() {
-      $('#definition-table').DataTable();
+
+<script>
+  $(document).ready(function() {
+    $('#definition-table').DataTable({
+      "pageLength": 25,
     });
-  </script>
--->
+  });
+</script>
+
+

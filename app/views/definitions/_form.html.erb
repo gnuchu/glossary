@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :word %>
-    <%= f.text_field :word %>
+    <%= f.text_field :word, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :definition %>
-    <%= f.text_field :definition %>
+    <%= f.text_field :definition, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :originator %>
-    <%= f.text_field :originator %>
+    <%= f.text_field :originator, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :use %>
-    <%= f.text_field :use %>
+    <%= f.text_field :use, class: 'form-control' %>
   </div>
 
-  <div class="actions">
+  <div class="form-group actions">
     <%= f.submit %>
   </div>
 <% end %>
